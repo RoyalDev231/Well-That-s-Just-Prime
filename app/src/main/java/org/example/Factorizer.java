@@ -10,12 +10,12 @@ public class Factorizer {
         }
 
         // Pull out factors of 2
-        while ((n & 1) == 0) { // same as n % 2 == 0
+        while ((n & 1) == 0) { 
             factors.add(2);
             n /= 2;
         }
 
-        // Pull out odd factors up to sqrt(n)
+        
         for (int f = 3; (long) f * f <= n; f += 2) {
             while (n % f == 0) {
                 factors.add(f);
